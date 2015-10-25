@@ -5,32 +5,30 @@
     box-sizing: border-box;
     font-family: Microsoft YaHei,cursive,Arial,SimSun;
 }
+
 /*header样式*/
 header
 {
     width: 100%;
+    min-width: 1000px;
     height: 110px;
-    position: relative;
     background:url("img/nav_bg.gif");
+    border-bottom: 3px solid #F4D74D;
 }
-header div
+.logo
 {
-    width:200px;
-    height:60px;
+    width:280px;
+    height:80px;
     float: left;
-    position: absolute;
-    top:30px;
-    left:200px;
-    background: #dddddd;
+    margin-left: 200px;
+    margin-top: 15px;
 }
 header ul
 {
     width: 200px;
     height:110px;
-    float: right;
-    display:inline-block;
-    position: absolute;
-    right:150px;
+    float: left;
+    margin-left: 460px;
     list-style: none;
 }
 header ul li,header ul li a
@@ -38,7 +36,6 @@ header ul li,header ul li a
     width: 100px;
     height:110px;
     float: left;
-    display:inline-block;
 }
 .navFirst
 {
@@ -60,28 +57,35 @@ header ul li,header ul li a
     background-image: url("img/nav.png");
     background-position:-300px -110px;
 }
+
 /*主体样式*/
 .bodyContainer{
     height:1200px;
     width: 100%;
-    background: #aaa;
 }
 .img-carousel{
-    width: 500px;
-    height: 560px;
+    width:960px;
+    height:560px;
+    overflow: hidden;
     margin: 0 auto;
-    background: #dddddd;
+}
+.img-carousel img{
+    display: block;
+    margin:0 auto;
+}
+
+.aboutbg{
+    width:100%;
+    background: url("img/bg.jpg");
 }
 .about_me{
     width:1000px;
     height:500px;
     margin: 0 auto;
-    background-color: #0099cc;
 }
 .summary,.details{
     width:500px;
     height:500px;
-    border: 1px solid #008694;
     float: left;
 }
 .about_title{
@@ -140,18 +144,59 @@ header ul li,header ul li a
     height:100px;
     margin: 0 auto;
     margin-top:20px;
-    background-color: #55d769;
+    border:1px solid #dddddd;
 }
-.details_first,.details_second{
-    width:350px;
+.details_first,.details_second,.details_third{
+    width:250px;
     height:70px;
     margin:15px auto;
-    background-color: #55d769;
+    border: 1px solid #dddddd;
 }
 .details_first{
     margin-top:40px;
 }
-
+.details_first p span{
+    width:53px;
+    height: 68px;
+    background: url("img/ido.png") no-repeat 0 -71px;
+    float: left;
+}
+.details_first:hover p span{
+    background: url("img/ido.png") no-repeat -54px -71px;
+}
+.details_first div{
+    float: left;
+    margin-left: 10px;
+    margin-top: 3px;
+}
+.details_second p span{
+    width:53px;
+    height: 68px;
+    background: url("img/ido.png") no-repeat 0 0;
+    float: left;
+}
+.details_second:hover p span{
+    background: url("img/ido.png") no-repeat -54px 0;
+}
+.details_second div{
+    float: left;
+    margin-left: 10px;
+    margin-top: 3px;
+}
+.details_third p span{
+    width:53px;
+    height: 68px;
+    background: url("img/ido.png") no-repeat 0 -140px;
+    float: left;
+}
+.details_third:hover p span{
+    background: url("img/ido.png") no-repeat -54px -140px;
+}
+.details_third div{
+    float: left;
+    margin-left: 10px;
+    margin-top: 3px;
+}
 /*footer样式*/
 footer{
     width:100%;

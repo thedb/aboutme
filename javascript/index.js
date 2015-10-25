@@ -12,29 +12,8 @@ function navOmout(){
     navFirst.setAttribute("class","navFirst");
     console.log(navSecond);
 }
-//img-carousel
-jQuery.fn.adv = function(imgs){
-    var index = 0;
-    var selector = this.selector;
-    var img = new Image();
-    img.src = imgs[index];
-    img.onload = function(){
-        $(selector).append(img);
-    };
-    setInterval(function(){
-        $(selector).html("");
-        index ++;
-        if(index >= imgs.length){
-            index = 0;
-        }
-        img.src = imgs[index];
-        img.onload = function(){
-            $(selector).append(img);
-        }
-    },4000);
-};
 //body
-//关于标题动画效果
+//aboutme标题动画效果
 $(function (){
     $(".about_title").hover(function(){
         $(this).find(".about_first").animate({
@@ -47,7 +26,22 @@ $(function (){
         $(this).find(".about_second").animate({backgroundPositionX: "-125px",backgroundPositionY: "-43"},300);
     });
 });
-
+//首页轮播图动画效果
+$(function(){
+    var index=1;//
+    var img=$("#img-carousel img");
+    var len=img.length;
+    function showImg(index){
+        img.eq(index).fadeIn(1000).siblings("img").fadeOut(1000);
+    }
+    setInterval(function(){
+        showImg(index);
+        index++;
+        if(index==len){
+            index=0;
+        }
+    },4000);
+});
 //footer
 $('.two-dimensionCode').on("mouseenter",function(){
     var $img=$('.two-dimensionCode img');

@@ -7,33 +7,65 @@
 </head>
 <body>
 <header>
-    <div>左侧主页logo</div>
+    <div class="logo"><img src="img/logo.png" alt="个人主页"/></div>
     <ul>
         <li class="navFirst"><a href="#"></a></li>
         <li class="navSecond" onmouseover="navOmover();" onmouseout="navOmout();"><a href="#"></a></li>
     </ul>
 </header>
 <div class="bodyContainer">
-    <div class="img-carousel" id="img-carousel"></div>
-    <div class="about_me">
-        <div class="summary">
-            <div class="about_title who">
-                <span class="about_first"></span>
-                <span class="about_second"></span>
-            </div>
-            <div class="summary_photo"></div>
-            <div class="summary_p"></div>
+    <div class="img-carousel" >
+        <div id="img-carousel">
+            <img src="img/1.jpg" alt=""/>
+            <img src="img/2.jpg" alt=""/>
+            <img src="img/3.jpg" alt=""/>
         </div>
-        <div class="details">
-            <div class="about_title what">
-                <span class="about_first"></span>
-                <span class="about_second"></span>
+    </div>
+    <div class="aboutbg">
+        <div class="about_me">
+            <div class="summary">
+                <div class="about_title who">
+                    <span class="about_first"></span>
+                    <span class="about_second"></span>
+                </div>
+                <div class="summary_photo"></div>
+                <div class="summary_p">
+                    <p>陈思昂，前端开发工程师，生于上海。12年毕业于苏州健雄学院，毕业后回到上海，从事专业相关工作。业余时间喜欢了解各种前沿科技，
+                        工作两年后下定决心成为程序猿，15年初开始自学前端设计，目前累计学习与培训将近一年时间。首页有我的项目&作品，欢迎点击。</p>
+                </div>
             </div>
-            <div class="details_first"></div>
-            <div class="details_second">
+            <div class="details">
+                <div class="about_title what">
+                    <span class="about_first"></span>
+                    <span class="about_second"></span>
+                </div>
+                <div class="details_first">
+                        <p><span></span></p>
+                        <div>
+                            <p class="">User Interface Design</p>
+                            <p class="">Web网页页面设计</p>
+                            <p class="">产品原型设计</p>
+                        </div>
+                </div>
+                <div class="details_second">
+                    <p><span></span></p>
+                    <div>
+                        <p class="">Front-end Development</p>
+                        <p class="">网站前端开发/响应式布局</p>
+                        <p class="">Html5/CSS3/jQuery</p>
+                    </div>
+                </div>
+                <div class="details_third">
+                    <p><span></span></p>
+                    <div>
+                        <p class="">User Experience Design</p>
+                        <p class="">用户体验设计/前端框架</p>
+                        <p class="">angularJs/BootStrap</p>
+                    </div>
+                </div>
+                <div></div>
+                <div></div>
             </div>
-            <div></div>
-            <div></div>
         </div>
     </div>
 </div>
@@ -54,8 +86,6 @@
 <script src="javascript/jqBgAnimate.js"></script>
 <script src="javascript/index.js"></script>
 <script>
-var imgs = ["img/1.jpg", "img/2.jpg", "img/3.jpg", "img/4.jpg"];
-$("#img-carousel").adv(imgs);
 </script>
 </body>
 </html>
