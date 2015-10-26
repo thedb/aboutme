@@ -26,7 +26,7 @@ $(function (){
         $(this).find(".about_second").animate({backgroundPositionX: "-125px",backgroundPositionY: "-43"},300);
     });
 });
-//首页轮播图动画效果
+//头部轮播图动画效果
 $(function(){
     var index=1;//
     var img=$("#img-carousel img");
@@ -42,6 +42,43 @@ $(function(){
         }
     },4000);
 });
+//个人照片轮播图
+$(function(){
+    var index=1;
+    var imgli=$(".photo_body li");
+    var len=imgli.length;
+    var back=$(".photo_back");
+    var go=$(".photo_go");
+    var width=$(".photo_body").width();
+    //上一页
+    back.click(function() {
+        index -= 1;
+        if(index == -1) {index = len - 1;}
+        showPhoto(index);
+    });
+    //下一页
+    go.click(function() {
+        index += 1;
+        if(index == len) {index = 0;}
+        showPhoto(index);
+    });
+    function showPhoto(index){
+        var goLeft=-index*width;
+        imgli.animate({"left":goLeft},300);
+    }
+    $("#header_photo").hover(function() {
+        clearInterval(timer);
+    },
+    function() {
+        timer=setInterval(function(){
+            showPhoto(index);
+            index++;
+            if(index==len){
+                index=0;
+            }
+        },3000);
+    }).trigger("mouseleave");
+})
 //footer
 $('.two-dimensionCode').on("mouseenter",function(){
     var $img=$('.two-dimensionCode img');

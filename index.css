@@ -59,8 +59,8 @@ header ul li,header ul li a
 }
 
 /*主体样式*/
+/*头部轮播图*/
 .bodyContainer{
-    height:1200px;
     width: 100%;
 }
 .img-carousel{
@@ -73,19 +73,19 @@ header ul li,header ul li a
     display: block;
     margin:0 auto;
 }
-
+/*标题动画*/
 .aboutbg{
     width:100%;
     background: url("img/bg.jpg");
 }
 .about_me{
     width:1000px;
-    height:500px;
+    height:400px;
     margin: 0 auto;
 }
 .summary,.details{
     width:500px;
-    height:500px;
+    height:400px;
     float: left;
 }
 .about_title{
@@ -132,28 +132,79 @@ header ul li,header ul li a
     float: left;
     background: url("img/what.png") no-repeat -125px -44px;
 }
+/*头像轮播图*/
 .summary_photo{
     width:400px;
-    height:190px;
+    height:150px;
     margin: 0 auto;
     margin-top:30px;
-    background-color: #55d769;
 }
-.summary_p{
-    width:400px;
+.summary_photo p{
+    width:30px;
     height:100px;
-    margin: 0 auto;
-    margin-top:20px;
-    border:1px solid #dddddd;
+    vertical-align: middle;
+    display: inline-block;
+    margin-right: 0;
+}
+.photo_back{
+    width:30px;
+    height:100px;
+    background: url("img/switch_go.png") no-repeat 0 0;
+    cursor: pointer;
+}
+.photo_go{
+    width:30px;
+    height:100px;
+    background: url("img/switch_go.png") no-repeat -30px 0;
+    cursor: pointer;
+}
+.photo_body{
+    width: 150px;
+    height:150px;
+    display: inline-block;
+    margin-right:85px;
+    margin-left:85px;
+    margin-bottom:5px;
+    vertical-align: middle;
+    overflow: hidden;
+    position: relative;
+
+}
+.photo_body ul{
+    width: 450px;
+    height: 150px;
+    list-style: none;
+    position: absolute;
+}
+.photo_body ul li{
+    width: 150px;
+    height:150px;
+    position: relative;
+    float: left;
+}
+/*个人介绍*/
+.summary_p{
+    width:420px;
+    height:100px;
+    margin: 10px auto;
 }
 .details_first,.details_second,.details_third{
-    width:250px;
+    width:280px;
     height:70px;
     margin:15px auto;
-    border: 1px solid #dddddd;
+}
+.details_title{
+    line-height: 1.5;
+    font-size: 18px;
+    color:#333;
+}
+.details_body{
+    line-height: 1.4;
+    font-size: 14px;
+    color:#999;
 }
 .details_first{
-    margin-top:40px;
+    margin-top:50px;
 }
 .details_first p span{
     width:53px;
@@ -192,10 +243,54 @@ header ul li,header ul li a
 .details_third:hover p span{
     background: url("img/ido.png") no-repeat -54px -140px;
 }
-.details_third div{
+.details_third div {
     float: left;
     margin-left: 10px;
     margin-top: 3px;
+}
+.contact{
+    width:100%;
+    background: url("img/bg.jpg");
+    margin-bottom: -20px;
+}
+.line{
+    width:960px;
+    height:102px;
+    margin: 0 auto;
+    background: url("img/line2.png");
+}
+.contact_me{
+    width:960px;
+    margin: 0 auto;
+    height:100px;
+}
+.contact_photo{
+    margin-left: 30px;
+    float: left;
+}
+.contact_body{
+    width:960px;
+    height:100px;
+}
+.contact_title{
+    margin-left: 20px;
+    margin-top:15px;
+    font-size: 30px;
+    color:#000;
+    line-height: 30px;
+    float: left;
+
+}
+.contact_container{
+    margin-top: 5px;
+    margin-left: 50px;
+    float: left;
+}
+.contact_mobile,.contact_email{
+    font-size: 20px;
+    color:#333;
+    line-height: 24px;
+    margin-left: 15px;
 }
 /*footer样式*/
 footer{
