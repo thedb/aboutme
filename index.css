@@ -68,10 +68,25 @@ header ul li,header ul li a
     height:560px;
     overflow: hidden;
     margin: 0 auto;
+    position: relative;
 }
-.img-carousel img{
+.img-carousel a,.img-carousel img{
     display: block;
     margin:0 auto;
+
+}
+.crossband{
+    position: absolute;
+    width:180px;
+    height:30px;
+    background-color: antiquewhite;
+    transform:matrix(0.866,0.8,-0.8,0.866,-30,490);
+    z-index: 1;
+}
+.crossband p{
+    display: block;
+    margin-top: 3px;
+    margin-left: 60px;
 }
 /*标题动画*/
 .aboutbg{

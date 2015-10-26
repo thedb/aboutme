@@ -29,10 +29,10 @@ $(function (){
 //头部轮播图动画效果
 $(function(){
     var index=1;//
-    var img=$("#img-carousel img");
+    var img=$("#img-carousel a");
     var len=img.length;
     function showImg(index){
-        img.eq(index).fadeIn(1000).siblings("img").fadeOut(1000);
+        img.eq(index).fadeIn(1000).siblings("a").fadeOut(1000);
     }
     setInterval(function(){
         showImg(index);
@@ -70,15 +70,16 @@ $(function(){
         clearInterval(timer);
     },
     function() {
-        timer=setInterval(function(){
+         timer=setInterval(function(){
             showPhoto(index);
-            index++;
-            if(index==len){
-                index=0;
-            }
-        },3000);
-    }).trigger("mouseleave");
-})
+             index++;
+             if(index==len){
+                 index=0;
+             }
+         },3000)
+    }
+).trigger("mouseleave");
+});
 //footer
 $('.two-dimensionCode').on("mouseenter",function(){
     var $img=$('.two-dimensionCode img');
