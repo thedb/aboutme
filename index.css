@@ -73,7 +73,30 @@ header ul li,header ul li a
 .img-carousel a,.img-carousel img{
     display: block;
     margin:0 auto;
-
+}
+.img-carousel>span{
+    width:20px;
+    height:20px;
+    border-radius: 10px;
+    background-color: springgreen;
+    position: absolute;
+    opacity: .4;
+    cursor: pointer;
+}
+.img-carousel>span:hover{
+    background-color: darkgreen;
+}
+.ball_first{
+    top:90%;
+    left:43%;
+}
+.ball_second{
+    top:90%;
+    left:48%;
+}
+.ball_third{
+    top:90%;
+    left:53%;
 }
 .crossband{
     position: absolute;

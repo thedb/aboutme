@@ -10,7 +10,6 @@ function navOmout(){
     var navSecond=document.getElementsByClassName('navSecondBg')[0];
     navSecond.setAttribute("class","navSecond");
     navFirst.setAttribute("class","navFirst");
-    console.log(navSecond);
 }
 //body
 //aboutme标题动画效果
@@ -29,37 +28,45 @@ $(function (){
 //头部轮播图动画效果
 $(function(){
     var index=1;//
-    var img=$("#img-carousel a");
+    var img=$(".img-carousel a");
     var len=img.length;
+    var ball=$(".img-carousel span");
+    for(var i=0;i<ball.length;i++){
+        (function(i){
+            ball[i].onclick=function(){
+                showImg(i);
+            }
+        })(i)
+    }
     function showImg(index){
         img.eq(index).fadeIn(1000).siblings("a").fadeOut(1000);
     }
     setInterval(function(){
         showImg(index);
-        index++;
         if(index==len){
             index=0;
         }
+        index++;
     },4000);
 });
 //个人照片轮播图
 $(function(){
-    var index=1;
+    var index=0;
     var imgli=$(".photo_body li");
-    var len=imgli.length;
+    var length=imgli.length;
     var back=$(".photo_back");
     var go=$(".photo_go");
     var width=$(".photo_body").width();
     //上一页
     back.click(function() {
         index -= 1;
-        if(index == -1) {index = len - 1;}
+        if(index == -1) {index = length - 1;}
         showPhoto(index);
     });
     //下一页
     go.click(function() {
         index += 1;
-        if(index == len) {index = 0;}
+        if(index == length) {index = 0;}
         showPhoto(index);
     });
     function showPhoto(index){
@@ -73,7 +80,7 @@ $(function(){
          timer=setInterval(function(){
             showPhoto(index);
              index++;
-             if(index==len){
+             if(index==length){
                  index=0;
              }
          },3000)
