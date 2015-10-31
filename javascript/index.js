@@ -35,17 +35,25 @@ $(function(){
         (function(i){
             ball[i].onclick=function(){
                 showImg(i);
+                clearInterval(timer);
+                timer=setInterval(function(){
+                    if(index==len){
+                        index=0;
+                    }
+                    showImg(index);
+                    index++;
+                },4000);
             }
         })(i)
     }
     function showImg(index){
-        img.eq(index).fadeIn(1000).siblings("a").fadeOut(1000);
+        img.eq(index).fadeIn(500).siblings("a").fadeOut(500);
     }
-    setInterval(function(){
-        showImg(index);
+    timer=setInterval(function(){
         if(index==len){
             index=0;
         }
+        showImg(index);
         index++;
     },4000);
 });
@@ -74,10 +82,10 @@ $(function(){
         imgli.animate({"left":goLeft},300);
     }
     $("#header_photo").hover(function() {
-        clearInterval(timer);
+        clearInterval(timer2);
     },
     function() {
-         timer=setInterval(function(){
+         timer2=setInterval(function(){
             showPhoto(index);
              index++;
              if(index==length){
